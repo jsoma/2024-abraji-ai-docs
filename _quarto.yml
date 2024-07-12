@@ -1,0 +1,63 @@
+project:
+  type: website
+  output-dir: docs
+execute:
+  freeze: auto
+resources:
+  - CNAME
+  - assets/*
+website:
+  # google-analytics: "G-T8MPS78ZR0"
+  title: "Abraji 2024: AI for Investigating Documents"
+  twitter-card:
+    creator: "@dangerscarf"
+  search: true
+  # reader-mode: true
+  repo-url: https://github.com/jsoma/2024-abraji-ai-documents
+  site-url: https://jsoma.github.io/2024-abraji-ai-documents
+  repo-actions: [edit, issue]
+  page-navigation: true
+  navbar:
+    background: dark
+  sidebar:
+    style: "docked"
+    search: true
+    contents:
+      - text: "Lots of links"
+        file: index.qmd
+      - text: "Slides"
+        file: slides.qmd
+      - text: "Instructor (Python)"
+        file: instructor.ipynb
+  page-footer: 
+    border: false
+    background: dark
+    left: >
+      Find me at [js4571@columbia.com](mailto:js4571@columbia.com)
+      or [@dangerscarf](https://twitter.com/dangerscarf)
+    center: >
+      ©2024, Jonathan Soma
+    right: 
+      - icon: github
+        href: https://github.com/jsoma
+      - icon: twitter 
+        href: https://twitter.com/dangerscarf
+      - icon: envelope
+        href: mailto:js4571@columbia.edu
+format:
+  html:
+    # template-partials:
+    #   - partials/title-block.html
+    # callout-appearance: simple
+    fontsize: 1.2em;
+    toc: false
+    toc-title: Table of contents
+    theme:
+      - cosmo
+      # - custom.scss
+    # css: static/style.css
+    linkcolor: MediumVioletRed
+    number-sections: false
+    grid:
+      body-width: 1020px
+      margin-width: 250px

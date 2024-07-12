@@ -1,0 +1,54 @@
+# Investigating Documents using AI
+
+July 13, 2024, [Abraji Congress](https://congresso.abraji.org.br/), São Paulo
+
+**Jonathan Soma**, Knight Chair in Data Journalism, Columbia University.
+
+Director of the [MS in Data Journalism](https://journalism.columbia.edu/ms-data-journalism) (1 year Master's degree) and [Lede Program](https://ledeprogram.com/) (10 week summer program).
+
+Find me at [@dangerscarf](https://twitter.com/dangerscarf) or [js4571@columbia.edu](mailto:js4571@columbia.edu).
+
+## Notes 
+
+This only covers the small, small portion of content that I talked about at Abraji! If you're interested in hearing more in-depth or broader uses of AI in journalism, look at my [12-hour video series Practical AI for Investigative Journalism](https://www.youtube.com/playlist?list=PLewNEVDy7gq1_GPUaL0OQ31QsiHP5ncAQ).
+
+If you're interested in more programming stuff, take a look at [jonathansoma.com](https://jonathansoma.com/) and [Everything I Know](https://jonathansoma.com/everything/), two places where I put a lot of my content.
+
+## Slides
+
+You can find the slides on the [slides page](slides.qmd)
+
+## Links
+
+- [OpenAI Playground](https://platform.openai.com/playground) to see probabilities for different texts. You'll need to select "Completions" on the left and "Show probabilities: Full Spectrum" in the bottom right-hand corner.
+- [Chatbots may hallucinate more often than many realize](https://www.nytimes.com/2023/11/06/technology/chatbots-hallucination-rates.html) from The New York Times
+- [Hallucination Leaderboard](https://huggingface.co/spaces/vectara/Hallucination-evaluation-leaderboard)
+- [AcaraJazz Instagram page](https://www.instagram.com/o_acarajazz/)
+- [Anthropic's Claude](https://claude.ai/) (similar to ChatGPT)
+- [Washington Post investigation into app store complaints](https://www.washingtonpost.com/technology/2019/11/22/apple-says-its-app-store-is-safe-trusted-place-we-found-reports-unwanted-sexual-behavior-six-apps-some-targeting-minors/)
+- [The CITY's coverage map of stories](https://projects.thecity.nyc/thecity-coverage-map/)
+
+## AI in a Spreadsheet
+
+- [Claude for Sheets](https://workspace.google.com/marketplace/app/claude_for_sheets/909417792257)
+- API keys
+    - [OpenAI API key page](https://platform.openai.com/account/api-keys)
+    - [Anthropic's (Claude) API key page](https://console.anthropic.com/settings/keys)
+    - *If you want to try it out without signing up, just email me!*
+- [Google Sheet that uses `=CLAUDE`](https://docs.google.com/spreadsheets/d/14CHGyrcmq3M9OFXohsItKdSokdkBl-5DIP5TZWtBL0M/edit?usp=sharing)
+
+## AI in Python
+
+- [Instructor](instructor.ipynb) for using Python to extract structured data
+
+## RAG ("chatting with your PDFs")
+
+- [AnythingLLM](https://docs.useanything.com/) for chatting with your documents without Python
+- [LlamaIndex](https://www.llamaindex.ai/) for chatting with your documents in Python
+- [MyCity NYC chatbot](https://chat.nyc.gov/)
+- [NYC’s AI Chatbot Tells Businesses to Break the Law](https://themarkup.org/news/2024/03/29/nycs-ai-chatbot-tells-businesses-to-break-the-law) from The Markup
+
+## Other links
+
+- [Tabula](https://tabula.technology/) for extracting tables from PDFs
+- [OCRmyPDF](https://github.com/ocrmypdf/OCRmyPDF) for adding a text layet to image-based PDFs
