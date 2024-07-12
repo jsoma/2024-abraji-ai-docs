@@ -13,8 +13,8 @@ website:
     creator: "@dangerscarf"
   search: true
   # reader-mode: true
-  repo-url: https://github.com/jsoma/2024-abraji-ai-documents
-  site-url: https://jsoma.github.io/2024-abraji-ai-documents
+  repo-url: https://github.com/jsoma/2024-abraji-ai-docs
+  site-url: https://jsoma.github.io/2024-abraji-ai-docs
   repo-actions: [edit, issue]
   page-navigation: true
   navbar:
