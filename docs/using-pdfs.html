@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Abraji 2024: AI for Investigating Documents</title>
+<title>Abraji 2024: AI for Investigating Documents - Preparing PDFs for AI analysis</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,17 +20,51 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script src="site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="site_libs/quarto-nav/headroom.min.js"></script>
 <script src="site_libs/clipboard/clipboard.min.js"></script>
 <script src="site_libs/quarto-search/autocomplete.umd.js"></script>
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./slides.html" rel="next">
+<link href="./instructor.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -67,10 +101,13 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
+
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
 
 
 <link rel="stylesheet" href="static/style.css">
-<meta name="twitter:title" content="Abraji 2024: AI for Investigating Documents">
+<meta name="twitter:title" content="Abraji 2024: AI for Investigating Documents - Preparing PDFs for AI analysis">
 <meta name="twitter:description" content="">
 <meta name="twitter:creator" content="@dangerscarf">
 <meta name="twitter:card" content="summary">
@@ -97,7 +134,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Lots of links</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./using-pdfs.html">Preparing PDFs</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -119,7 +156,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lots of links</span></a>
   </div>
 </li>
@@ -137,7 +174,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./using-pdfs.html" class="sidebar-item-text sidebar-link">
+  <a href="./using-pdfs.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Preparing PDFs</span></a>
   </div>
 </li>
@@ -150,73 +187,266 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Preparing PDFs for AI analysis</h1>
+</div>
 
 
 
-<section id="investigating-documents-using-ai" class="level1">
-<h1>Investigating Documents using AI</h1>
-<p>July 13, 2024, <a href="https://congresso.abraji.org.br/">Abraji Congress</a>, São Paulo</p>
-<p><strong>Jonathan Soma</strong>, Knight Chair in Data Journalism, Columbia University.</p>
-<p>Director of the <a href="https://journalism.columbia.edu/ms-data-journalism">MS in Data Journalism</a> (1 year Master’s degree) and <a href="https://ledeprogram.com/">Lede Program</a> (10 week summer program).</p>
-<p>Find me at <a href="https://twitter.com/dangerscarf"><span class="citation" data-cites="dangerscarf">@dangerscarf</span></a> or <a href="mailto:js4571@columbia.edu">js4571@columbia.edu</a>.</p>
-<section id="notes" class="level2">
-<h2 class="anchored" data-anchor-id="notes">Notes</h2>
-<p>This only covers the small, small portion of content that I talked about at Abraji! If you’re interested in hearing more in-depth or broader uses of AI in journalism, look at my <a href="https://www.youtube.com/playlist?list=PLewNEVDy7gq1_GPUaL0OQ31QsiHP5ncAQ">12-hour video series Practical AI for Investigative Journalism</a>.</p>
-<p>If you’re interested in more programming stuff, take a look at <a href="https://jonathansoma.com/">jonathansoma.com</a> and <a href="https://jonathansoma.com/everything/">Everything I Know</a>, two places where I put a lot of my content.</p>
-</section>
-<section id="slides" class="level2">
-<h2 class="anchored" data-anchor-id="slides">Slides</h2>
-<p>You can find the slides on the <a href="./slides.html">slides page</a></p>
-</section>
-<section id="links" class="level2">
-<h2 class="anchored" data-anchor-id="links">Links</h2>
-<ul>
-<li><a href="https://platform.openai.com/playground">OpenAI Playground</a> to see probabilities for different texts. You’ll need to select “Completions” on the left and “Show probabilities: Full Spectrum” in the bottom right-hand corner.</li>
-<li><a href="https://www.nytimes.com/2023/11/06/technology/chatbots-hallucination-rates.html">Chatbots may hallucinate more often than many realize</a> from The New York Times</li>
-<li><a href="https://huggingface.co/spaces/vectara/Hallucination-evaluation-leaderboard">Hallucination Leaderboard</a></li>
-<li><a href="https://www.instagram.com/o_acarajazz/">AcaraJazz Instagram page</a></li>
-<li><a href="https://claude.ai/">Anthropic’s Claude</a> (similar to ChatGPT)</li>
-<li><a href="https://www.washingtonpost.com/technology/2019/11/22/apple-says-its-app-store-is-safe-trusted-place-we-found-reports-unwanted-sexual-behavior-six-apps-some-targeting-minors/">Washington Post investigation into app store complaints</a></li>
-<li><a href="https://projects.thecity.nyc/thecity-coverage-map/">The CITY’s coverage map of stories</a></li>
-</ul>
-</section>
-<section id="ai-in-a-spreadsheet" class="level2">
-<h2 class="anchored" data-anchor-id="ai-in-a-spreadsheet">AI in a Spreadsheet</h2>
-<ul>
-<li><a href="https://workspace.google.com/marketplace/app/claude_for_sheets/909417792257">Claude for Sheets</a></li>
-<li>API keys
-<ul>
-<li><a href="https://platform.openai.com/account/api-keys">OpenAI API key page</a></li>
-<li><a href="https://console.anthropic.com/settings/keys">Anthropic’s (Claude) API key page</a></li>
-<li><em>If you want to try it out without signing up, just email me!</em></li>
-</ul></li>
-<li><a href="https://docs.google.com/spreadsheets/d/14CHGyrcmq3M9OFXohsItKdSokdkBl-5DIP5TZWtBL0M/edit?usp=sharing">Google Sheet that uses <code>=CLAUDE</code></a></li>
-</ul>
-</section>
-<section id="ai-in-python" class="level2">
-<h2 class="anchored" data-anchor-id="ai-in-python">AI in Python</h2>
-<ul>
-<li><a href="./instructor.html">Instructor</a> for using Python to extract structured data</li>
-</ul>
-</section>
-<section id="rag-chatting-with-your-pdfs" class="level2">
-<h2 class="anchored" data-anchor-id="rag-chatting-with-your-pdfs">RAG (“chatting with your PDFs”)</h2>
-<ul>
-<li><a href="https://docs.useanything.com/">AnythingLLM</a> for chatting with your documents without Python</li>
-<li><a href="https://www.llamaindex.ai/">LlamaIndex</a> for chatting with your documents in Python</li>
-<li><a href="https://chat.nyc.gov/">MyCity NYC chatbot</a></li>
-<li><a href="https://themarkup.org/news/2024/03/29/nycs-ai-chatbot-tells-businesses-to-break-the-law">NYC’s AI Chatbot Tells Businesses to Break the Law</a> from The Markup</li>
-</ul>
-</section>
-<section id="other-links" class="level2">
-<h2 class="anchored" data-anchor-id="other-links">Other links</h2>
-<ul>
-<li><a href="https://tabula.technology/">Tabula</a> for extracting tables from PDFs</li>
-<li><a href="https://github.com/ocrmypdf/OCRmyPDF">OCRmyPDF</a> for adding a text layet to image-based PDFs</li>
-</ul>
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
 
 
-</section>
+</header>
+
+
+<p>If you have a PDF with selectable text, it’s simple to extract the text using <a href="https://github.com/pdfminer/pdfminer.six">pdfminer.six</a>, a Python tool. And if you’re not using Python, just could just cut and paste!</p>
+<p>We’ll start by installing pdfminer.six.</p>
+<div id="158dd9c8-bdc2-45ba-84ac-f41ac4ddd678" class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>pip install <span class="op">--</span>quiet <span class="op">--</span>upgrade pdfminer.six</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+[notice] A new release of pip is available: 23.0.1 -&gt; 24.1.2
+[notice] To update, run: pip install --upgrade pip
+Note: you may need to restart the kernel to use updated packages.</code></pre>
+</div>
+</div>
+<p>Once it’s installed, pdfminer.six is remarkably easy to use!</p>
+<div id="6d9f8380-59e5-40a5-9ca6-5f4fcd29e781" class="cell" data-execution_count="8">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pdfminer.high_level <span class="im">import</span> extract_text</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>text <span class="op">=</span> extract_text(<span class="st">"pdf-documents/presentation.pdf"</span>)</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(text)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>powerpoint
+
+Tuesday, December 08, 2015
+
+9:33 AM
+
+Subject
+
+powerpoint
+
+From
+
+To
+
+Sent
+
+Attachments
+
+Green, Cary -FS
+
+Jackson, William F -FS
+
+Friday, May 01, 2015 10:58 AM
+
+SumCo
+Forest He...
+
+Bill – here is a powerpoint presentation from last fall that I presented to Summit County citizens. Has 
+some of the data you were asking for earlier.
+
+Cary
+
+Cary Green, Forester 
+East Zone TMA
+
+Forest Service 
+White River National Forest, Eagle/Holy Cross Ranger District
+
+p: 970-827-5160 
+c: 970-390-3234 
+f: 970-827-9343 
+cgreen@fs.fed.us
+
+24747 US Highway 24, PO Box 190 
+Minturn, CO 81645
+www.fs.fed.us
+
+Caring for the land and serving people
+
+General Page 1
+
+   
+   
+</code></pre>
+</div>
+</div>
+<p>But you usually don’t just have one PDF, usually you have a <em>lot</em> of them!</p>
+<section id="opening-many-pdf-files-and-saving-to-csv" class="level2">
+<h2 class="anchored" data-anchor-id="opening-many-pdf-files-and-saving-to-csv">Opening many PDF files and saving to CSV</h2>
+<p>In the most common use case, you have a folder full of PDFs and you need to convert them into a CSV file, where every row has the PDF content. Then you can use <a href="./index.html">the tools we talked about</a> to analyze them with Google Sheets or Python.</p>
+<div id="0a0f3104-4ef3-4fcb-b357-fe3082e14908" class="cell" data-execution_count="9">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>pip install <span class="op">--</span>upgrade <span class="op">--</span>quiet pandas</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+[notice] A new release of pip is available: 23.0.1 -&gt; 24.1.2
+[notice] To update, run: pip install --upgrade pip
+Note: you may need to restart the kernel to use updated packages.</code></pre>
+</div>
+</div>
+<div id="501b5605-859a-4ab6-9d08-0fe06b656db4" class="cell" data-execution_count="16">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> glob</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pdfminer.high_level <span class="im">import</span> extract_text</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>pd.options.display.max_colwidth <span class="op">=</span> <span class="dv">200</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Find all of the pdfs from inside of the "pdf-documents" folder</span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>filenames <span class="op">=</span> glob.glob(<span class="st">"pdf-documents/*.pdf"</span>)</span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Get the text for each of them</span></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>contents <span class="op">=</span> [extract_text(filename) <span class="cf">for</span> filename <span class="kw">in</span> filenames]</span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Turn it into a spreadsheet</span></span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.DataFrame({</span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>    <span class="st">'filename'</span>: filenames,</span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>    <span class="st">'content'</span>: contents</span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>})</span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Save the file as saved.csv</span></span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a>df.to_csv(<span class="st">"saved.csv"</span>, index<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a>df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="16">
+<div>
+<div>
+
+
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">filename</th>
+<th data-quarto-table-cell-role="th">content</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>pdf-documents/Forest Service burn piles.pdf</td>
+<td>Forest Service burn piles\n\nTuesday, December 08, 2015\n\n9:54 AM\n\nSubject\n\nForest Service burn piles\n\nFrom\n\nJackson, William F -FS\n\nTo\n\nCc\n\nbrownellbailey@gmail.com\n\nWilmore, Ros...</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>pdf-documents/April 3 - Dillon Veg project activity meeting.pdf</td>
+<td>April 3 - Dillon Veg project activity meeting\n\nTuesday, December 08, 2015\n\n8:44 AM\n\nSubject\n\nApril 3 - Dillon Veg project activity meeting\n\nFrom\n\nGreen, Cary -FS\n\nTo\n\nCc\n\nWilmore...</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>pdf-documents/7 Day Staffing.pdf</td>
+<td>7 Day Staffing\n\nTuesday, December 08, 2015\n\n9:57 AM\n\nSubject\n\n7 Day Staffing\n\nFrom\n\nConrad, Justin D -FS\n\nTo\n\nCc\n\nWilmore, Ross D -FS; Neely, David -FS; Mayville, Aaron W -FS; Ke...</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3</td>
+<td>pdf-documents/EZ Pile campaign update PP3.pdf</td>
+<td>EZ Pile campaign update PP3\n\nTuesday, December 08, 2015\n\n9:48 AM\n\nSubject\n\nEZ Pile campaign update PP3\n\nFrom\n\nTo\n\nWilmore, Ross D -FS\n\nMayville, Aaron W -FS; Keller, Cynthia P -FS;...</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">4</td>
+<td>pdf-documents/BOCC to Howard Brown May 2015 from Karn.pdf</td>
+<td>BOCC to Howard Brown May 2015.docx\n\nTuesday, December 08, 2015\n\n8:22 AM\n\nSubject\n\nBOCC to Howard Brown May 2015.docx\n\nFrom\n\nTo\n\nSent\n\nAttachments\n\nKarnS\n\nJackson, William F -FS...</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">5</td>
+<td>pdf-documents/presentation.pdf</td>
+<td>powerpoint\n\nTuesday, December 08, 2015\n\n9:33 AM\n\nSubject\n\npowerpoint\n\nFrom\n\nTo\n\nSent\n\nAttachments\n\nGreen, Cary -FS\n\nJackson, William F -FS\n\nFriday, May 01, 2015 10:58 AM\n\nS...</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">6</td>
+<td>pdf-documents/BOCC to Howard Brown May 2015.pdf</td>
+<td>Board of County Commissioners \n\n970-453-2561 \nPost Office Box 68 \n208 East Lincoln Avenue \nBreckenridge, Colorado 80424 \n\nMay 7, 2015 \n\nMr. Howard Brown \n376 Spring Beauty Dr. \nP.O. Box...</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">7</td>
+<td>pdf-documents/2016-2020 Denver Water 5 year plan proposals - reply due May 28th.pdf</td>
+<td>2016-2020 Denver Water 5 year plan proposals - reply \ndue May 28th\n\nTuesday, December 08, 2015\n\n8:18 AM\n\nSubject\n\n2016-2020 Denver Water 5 year plan proposals - reply due May 28th\n\nFrom...</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">8</td>
+<td>pdf-documents/DWB_ProjectProposals_Recreation_5_29_15.pdf</td>
+<td>Forest Service Road Decommissioning \n\nProject Description \nSix miles of existing roads would be decommissioned over three years. Road decommissioning \nis defined as: "Activities that result i...</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">9</td>
+<td>pdf-documents/EZ Pile burning update PP2.pdf</td>
+<td>EZ Pile burning update PP2\n\nTuesday, December 08, 2015\n\n9:47 AM\n\nSubject\n\nEZ Pile burning update PP2\n\nFrom\n\nWilmore, Ross D -FS\n\nTo\n\nMayville, Aaron W -FS; Keller, Cynthia P -FS; G...</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">10</td>
+<td>pdf-documents/Copy of KeystoneStewardship.pdf</td>
+<td>Keystone Stewardship Unit \n\nplot\n\nconstant\n\n1\n\n2\n\n3\n\n4\n\n5\n\n6\n\n7\n\n8\n\n9\n\n10\n\n11\n\n12\n\ntotal\n\n11.64\n\n11.64\n\n11.64\n\n11.64\n\n11.64\n\n11.64\n\n11.64\n\n11.64\n\n11...</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">11</td>
+<td>pdf-documents/Breckenridge Prescribed Burn Operations.pdf</td>
+<td>Breckenridge Prescribed Burn Operations\n\nTuesday, December 08, 2015\n\n9:45 AM\n\nSubject\n\nBreckenridge Prescribed Burn Operations\n\nFrom\n\nAyres, Todd -FS\n\nTo\n\nCc\n\nSent\n\nalangley (a...</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">12</td>
+<td>pdf-documents/2015 Summit County AOP Final Version 150330.pdf</td>
+<td>2015 SUMMIT COUNTY WILDFIRE \nANNUAL OPERATING PLAN \n\nPage 1 of 48 \n\n \n \n \n \n \nContents \nPREAMBLE ..........................................................................................</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">13</td>
+<td>pdf-documents/FW News Item -- Citizens Plead for Stop to Ophir Mountain Clear-Cutting.pdf</td>
+<td>FW: News Item -- Citizens Plead for Stop to Ophir \nMountain Clear-Cutting\n\nTuesday, December 08, 2015\n\n8:51 AM\n\nSubject\n\nFW: News Item -- Citizens Plead for Stop to Ophir Mountain Clear-C...</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">14</td>
+<td>pdf-documents/Dillon_CCI Needs Summer 2015.pdf</td>
+<td>WRNF Request for CCI Assistance \n\n2015 \n\nDillon RD CCI Needs Summer 2015 \n\n1) Burn pile rehab (Keystone, Swan, Barton, Peak 7 South) scatter or pile burned debris depending on \namount, scar...</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">15</td>
+<td>pdf-documents/EZ Pile Burning Update PP 1.pdf</td>
+<td>EZ Pile Burning Update PP 1\n\nTuesday, December 08, 2015\n\n9:44 AM\n\nSubject\n\nEZ Pile Burning Update PP 1\n\nFrom\n\nWilmore, Ross D -FS\n\nTo\n\nMayville, Aaron W -FS; Keller, Cynthia P -FS;...</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">16</td>
+<td>pdf-documents/Mount Powell Salvage Timber Sale.pdf</td>
+<td>Mount Powell Salvage Timber Sale\n\nTuesday, December 08, 2015\n\n8:26 AM\n\nSubject Mount Powell Salvage Timber Sale\n\nFrom\n\nCunning, Ken -FS\n\nTo\n\nCc\n\nJackson, William F -FS\n\nBraudis, ...</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">17</td>
+<td>pdf-documents/BOCC Response Letter to Howard Brown Petition.pdf</td>
+<td>BOCC Response Letter to Howard Brown Petition\n\nTuesday, December 08, 2015\n\n8:21 AM\n\nSubject\n\nBOCC Response Letter to Howard Brown Petition\n\nFrom\n\nTo\n\nSent\n\nAttachments\n\nEvaH\n\nJ...</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">18</td>
+<td>pdf-documents/Jackson_email-02.pdf</td>
+<td>Kight, Bill -FS\n\nFrom:\nSent:\nTo:\nSubject:\nSigned By:\n\nJackson, William F -FS\nSaturday, February 07, 2015 6:29 AM\nFS-pdl r2 wr dillon rd\nFW: EZ Pile burning update PP2\nwfjackson@fs.fed....</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">19</td>
+<td>pdf-documents/Jackson_email-01.pdf</td>
+<td>Kight, Bill -FS\n\nFrom:\nSent:\nTo:\nCc:\nSubject:\n\nKight, Bill -FS\nFriday, November 14, 2014 1:11 PM\nKight, Bill -FS\nFS-r2_whiteriver\nCrews to begin burning slash piles in Summit County Mo...</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</div>
+<p>Even though we can only see a little bit of the content, I promise it’s all there! Excel will have trouble opening the file (it doesn’t like that the PDF content takes up multiple lines), but if you add it to Google Sheets it’ll look great.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="in-sheets.png" class="img-fluid figure-img"></p>
+<figcaption>in sheets</figcaption>
+</figure>
+</div>
+<p>If you need to use OCR to turn images into text, I recommend taking a look at the links on the <a href="./index.html">front page</a>.</p>
+
+
 </section>
 
 </main> <!-- /main -->
@@ -609,11 +839,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="./instructor.html" class="pagination-link" aria-label="Instructor (Python)">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Instructor (Python)</span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./slides.html" class="pagination-link" aria-label="Slides">
-        <span class="nav-page-text">Slides</span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->
@@ -624,7 +854,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>   
     <div class="nav-footer-center">
 <p>©2024, Jonathan Soma</p>
-<div class="toc-actions"><ul><li><a href="https://github.com/jsoma/2024-abraji-ai-docs/edit/main/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/jsoma/2024-abraji-ai-docs/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+<div class="toc-actions"><ul><li><a href="https://github.dev/jsoma/2024-abraji-ai-docs/blob/main/using-pdfs.ipynb" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/jsoma/2024-abraji-ai-docs/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item compact">

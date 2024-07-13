@@ -29,6 +29,8 @@ website:
         file: slides.qmd
       - text: "Instructor (Python)"
         file: instructor.ipynb
+      - text: "Preparing PDFs"
+        file: using-pdfs.ipynb
   page-footer: 
     border: false
     background: dark
@@ -55,7 +57,7 @@ format:
     theme:
       - cosmo
       # - custom.scss
-    # css: static/style.css
+    css: static/style.css
     linkcolor: MediumVioletRed
     number-sections: false
     grid:
