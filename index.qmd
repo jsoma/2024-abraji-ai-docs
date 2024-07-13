@@ -52,3 +52,5 @@ You can find the slides on the [slides page](slides.qmd)
 
 - [Tabula](https://tabula.technology/) for extracting tables from PDFs
 - [OCRmyPDF](https://github.com/ocrmypdf/OCRmyPDF) for adding a text layet to image-based PDFs
+- [Semantra](https://github.com/freedmand/semantra) a "semantic search" tool that allows you to do fuzzy/non-exact/vibes-based searching over documents
+- [Investigate.ai: Data Science for Journalists](https://investigate.ai/), a website on traditional machine learning I built in around 2018
