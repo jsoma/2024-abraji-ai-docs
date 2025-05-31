@@ -1,4 +1,4 @@
-# Investigating AI with Documents
+# Investigating Documents with AI
 
 Jonathan Soma presenting at Abraji Congress 2024
 
